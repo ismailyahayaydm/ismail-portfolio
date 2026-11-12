@@ -1,0 +1,52 @@
+/* Ismail Yahaya - COS 106 Portfolio - External Stylesheet */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --green:#15803d; --dark:#14532d; --light:#dcfce7; --bg:#f8fafc; --text:#111827; --muted:#64748b; }
+body { font-family: Arial, Helvetica, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+a { color: var(--green); }
+header { background: var(--dark); color: white; position: sticky; top: 0; z-index: 10; }
+.nav { max-width: 1100px; margin: auto; padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-weight: 800; font-size: 20px; }
+.logo span { color: #86efac; }
+nav ul { list-style: none; display: flex; gap: 14px; flex-wrap: wrap; }
+nav a { color: white; text-decoration: none; padding: 8px 12px; border-radius: 999px; }
+nav a.active, nav a:hover { background: var(--green); }
+#menuBtn { display: none; background: var(--green); color: white; border: 0; padding: 8px 12px; border-radius: 8px; cursor: pointer; }
+main { max-width: 1100px; margin: auto; padding: 24px 18px 40px; }
+.hero { display: flex; gap: 28px; align-items: center; background: white; padding: 28px; border-radius: 18px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); flex-wrap: wrap; }
+.hero img { width: 230px; height: 230px; object-fit: cover; border-radius: 50%; border: 5px solid var(--green); }
+.badge { display: inline-block; background: var(--light); color: var(--dark); padding: 6px 12px; border-radius: 999px; font-weight: 700; margin: 6px 0; }
+h1 { font-size: 36px; line-height: 1.1; }
+h2 { margin: 26px 0 12px; color: var(--dark); }
+h3 { margin: 14px 0 8px; }
+.card { background: white; padding: 20px; border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.flex { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn { display: inline-block; background: var(--green); color: white; padding: 11px 18px; border-radius: 999px; text-decoration: none; font-weight: 700; border: 0; cursor: pointer; transition: transform .2s, background .2s; }
+.btn:hover { background: var(--dark); transform: translateY(-2px); }
+.btn-outline { background: white; color: var(--green); border: 2px solid var(--green); }
+.skill { margin: 10px 0; }
+.bar { height: 10px; background: #e2e8f0; border-radius: 999px; overflow: hidden; }
+.bar > div { height: 100%; background: var(--green); }
+table { width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; }
+th, td { padding: 12px; border-bottom: 1px solid #e2e8f0; text-align: left; }
+th { background: var(--dark); color: white; }
+input, select, textarea { width: 100%; padding: 11px; border: 1px solid #cbd5e1; border-radius: 10px; margin: 6px 0 12px; font-size: 15px; }
+label { font-weight: 700; }
+.error { color: #dc2626; font-size: 13px; min-height: 16px; }
+.success { color: #15803d; background: #dcfce7; padding: 12px; border-radius: 10px; margin-top: 10px; display: none; }
+.task { display: flex; justify-content: space-between; align-items: center; gap: 10px; background: white; padding: 12px; border-radius: 12px; margin: 8px 0; }
+.task.done span.title { text-decoration: line-through; color: #94a3b8; }
+.pill { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; background: #fef9c3; }
+.pill.High { background: #fee2e2; } .pill.Medium { background: #fef9c3; } .pill.Low { background: #dcfce7; }
+video { width: 100%; border-radius: 14px; background: #000; }
+footer { background: var(--dark); color: white; text-align: center; padding: 22px 16px; }
+footer a { color: #bbf7d0; }
+@media (max-width: 760px) {
+  .grid, .grid-2 { grid-template-columns: 1fr; }
+  .hero { flex-direction: column; text-align: center; }
+  #menuBtn { display: block; }
+  nav ul { display: none; width: 100%; flex-direction: column; }
+  nav ul.open { display: flex; }
+  h1 { font-size: 28px; }
+}
